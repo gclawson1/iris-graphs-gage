@@ -12,7 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 scat_petals <- ggplot(iris,aes(x = Petal.Length, y = Petal.Width)) +
-  geom_point()
+  geom_point(aes(color = Species)) +
+  theme_classic() +
+  labs(x = "Petal Length", y = "Petal Width", title = "Petal Length vs. Petal Width by Species") +
+  facet_wrap(~Species) + 
+  
 scat_petals
 ```
 
