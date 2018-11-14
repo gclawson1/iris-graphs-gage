@@ -1,0 +1,18 @@
+---
+title: "iris-graphs"
+author: "Gage Clawson"
+date: "11/13/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+scat_petals <- ggplot(iris,aes(x = Petal.Length, y = Petal.Width)) +
+  geom_point()
+scat_petals
+```
+
